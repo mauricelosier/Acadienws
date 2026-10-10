@@ -1,1 +1,279 @@
 
+Here is the full code for **`index.html`**, updated with the **Quicksand** font, the **blue color palette**, the **4-card service grid** (including Winter Snow Removal), a clean header without login links, an active bilingual language toggle, and a clean footer with no Odoo branding:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paysagement Acadien Landscaping | Eco-Friendly Landscaping in Sarsfield & Ottawa</title>
+    
+    <!-- Google Fonts: Quicksand -->
+    <link rel="preconnect" href="[suspicious link removed]">
+    <link rel="preconnect" href="[suspicious link removed]" crossorigin>
+    <link href="[suspicious link removed]" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --dark-navy: #0f172a;
+            --light-blue: #eff6ff;
+            --accent-blue: #0284c7;
+            --sky-blue: #38bdf8;
+            --text-dark: #1e293b;
+        }
+
+        body { 
+            font-family: 'Quicksand', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: var(--text-dark); 
+            line-height: 1.6; 
+            background-color: #f8fafc;
+        }
+
+        header { 
+            background-color: var(--dark-navy); 
+            color: white; 
+            padding: 1.2rem 2.5rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 700; color: #ffffff; letter-spacing: 0.5px; }
+        
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            margin-left: 1.5rem; 
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+        
+        nav a:hover { color: var(--sky-blue); }
+
+        .lang-toggle { 
+            background: var(--primary-blue); 
+            padding: 0.5rem 1rem; 
+            border-radius: 20px; 
+            font-weight: 700; 
+            border: 1px solid var(--sky-blue);
+        }
+
+        /* Hero Banner */
+        .hero { 
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(30, 64, 175, 0.85)), url('hero-bg.jpg') center/cover no-repeat var(--dark-navy); 
+            color: white;
+            padding: 6rem 2rem; 
+            text-align: center; 
+        }
+
+        .hero h1 { 
+            font-size: 2.8rem; 
+            margin-bottom: 1rem; 
+            font-weight: 700; 
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 1.5rem auto;
+            opacity: 0.95;
+        }
+
+        .cta-btn { 
+            background-color: var(--accent-blue); 
+            color: white; 
+            padding: 0.9rem 2rem; 
+            text-decoration: none; 
+            font-weight: 700; 
+            border-radius: 30px; 
+            display: inline-block; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .cta-btn:hover { 
+            background-color: var(--sky-blue); 
+            color: var(--dark-navy);
+            transform: translateY(-2px);
+        }
+
+        .services, .about, .contact { padding: 4rem 2rem; max-width: 1050px; margin: 0 auto; }
+        
+        /* 4-Card Grid Layout */
+        .service-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+            gap: 1.5rem; 
+            margin-top: 2rem; 
+        }
+
+        .card { 
+            border: none; 
+            padding: 1.8rem; 
+            border-radius: 12px; 
+            background: white; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+            border-top: 4px solid var(--primary-blue);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .card h3 { color: var(--primary-blue); margin-top: 0; font-size: 1.25rem; }
+
+        .about {
+            background-color: var(--light-blue);
+            border-radius: 12px;
+            margin-top: 2rem;
+        }
+
+        form { display: flex; flex-direction: column; gap: 1.2rem; margin-top: 1.5rem; }
+        label { font-weight: 700; display: block; color: var(--dark-navy); }
+        
+        input, select, textarea { 
+            font-family: 'Quicksand', sans-serif;
+            width: 100%; 
+            padding: 0.8rem; 
+            border: 1px solid #cbd5e1; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            background-color: #ffffff;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid var(--primary-blue);
+            border-color: transparent;
+        }
+
+        button { 
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--primary-blue); 
+            color: white; 
+            padding: 1rem 1.8rem; 
+            border: none; 
+            font-weight: 700; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            font-size: 1rem;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover { background-color: var(--dark-navy); }
+
+        footer { background: var(--dark-navy); color: white; text-align: center; padding: 2.5rem; margin-top: 4rem; }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="logo">Paysagement Acadien Landscaping</div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="index-fr.html" class="lang-toggle">Français (CA)</a>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <h1>Eco-Friendly Landscaping & Organic Lawn Care</h1>
+        <p>Serving Sarsfield, Rockland, Ottawa, and surrounding communities with 100% pesticide-free treatments, custom hardscaping, and year-round property care.</p>
+        <a href="tel:+16138782754" class="cta-btn">Call +1 613-878-2754</a>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="services">
+        <h2>Our Core Services</h2>
+        <div class="service-grid">
+            <div class="card">
+                <h3>Organic Lawn Care</h3>
+                <p>100% pesticide-free lawn care, eco-friendly fertilization, aeration, weed management, and scheduled mowing.</p>
+            </div>
+            <div class="card">
+                <h3>Design & Hardscaping</h3>
+                <p>Custom interlocking stone patios, walkways, retaining walls, and garden beds built with locally sourced materials.</p>
+            </div>
+            <div class="card">
+                <h3>Excavating & Drainage</h3>
+                <p>Professional site preparation, soil grading, trenching, culvert installation, and topsoil application.</p>
+            </div>
+            <div class="card">
+                <h3>Winter Snow Removal</h3>
+                <p>Reliable commercial and residential snow plowing, driveway clearing, and ice management throughout Sarsfield, Rockland, and Ottawa.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Paysagement Acadien Landscaping</h2>
+        <p>Founded in 2018 in Sarsfield, Ontario, Paysagement Acadien Landscaping provides residential and commercial property care across Eastern Ontario. Led by Maurice Losier, our bilingual team is dedicated to environmental responsibility, using organic practices and locally sourced materials. We hold an A+ Better Business Bureau rating and take pride in delivering trusted, durable outdoor solutions.</p>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Contact us about anything related to our company or services. We'll do our best to get back to you as soon as possible.</p>
+        
+        <form action="#" method="POST">
+            <div>
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div>
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company">
+            </div>
+            <div>
+                <label for="service">Service Requested</label>
+                <select id="service" name="service">
+                    <option value="general">General Inquiry</option>
+                    <option value="lawn-care">Organic Lawn Care & Maintenance</option>
+                    <option value="hardscaping">Landscape Design & Hardscaping</option>
+                    <option value="excavating">Excavating, Grading & Drainage</option>
+                    <option value="snow-removal">Snow Removal Services</option>
+                </select>
+            </div>
+            <div>
+                <label for="subject">Subject *</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div>
+                <label for="question">Question / Project Details *</label>
+                <textarea id="question" name="question" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit Inquiry</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p><strong>Paysagement Acadien Landscaping</strong> | 2253 Canaan Rd, Sarsfield, ON K0A 3E0</p>
+        <p>Phone: +1 613-878-2754 | Email: info@acadienlandscaping.com</p>
+        <p>&copy; 2026 Paysagement Acadien Landscaping. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+```
+
+🌐 Would you like me to display the matching **`index-fr.html`** file as well to ensure both language versions are identical in design and structure?
