@@ -4,3 +4,105 @@ Paysagement Acadien Landscaping
 
 
 <div class="logo"><img src="assets/img/AcadienLandscapingHorBW.png" alt="Paysagement Acadien Landscaping"  /> </div>
+
+
+{
+    "Command": "\"/docker-entrypoint.…\"",
+    "CreatedAt": "2026-09-25 22:26:12 +0000 UTC",
+    "ID": "5081d772abfd",
+    "Image": "ghcr.io/mauricelosier/ws:latest",
+    "Labels": "maintainer=NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e",
+    "LocalVolumes": "0",
+    "Mounts": "",
+    "Names": "website",
+    "Networks": "bridge",
+    "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+    },
+    "Ports": "0.0.0.0:80-\u003e80/tcp, [::]:80-\u003e80/tcp",
+    "RunningFor": "2 weeks ago",
+    "Size": "0B",
+    "State": "running",
+    "Status": "Up 2 weeks"
+}
+{
+    "Command": "\"/docker-entrypoint.…\"",
+    "CreatedAt": "2026-09-19 17:06:03 +0000 UTC",
+    "ID": "6e92a5abda42",
+    "Image": "nginx",
+    "Labels": "maintainer=NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e",
+    "LocalVolumes": "0",
+    "Mounts": "",
+    "Names": "my-nginx",
+    "Networks": "bridge",
+    "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+    },
+    "Ports": "",
+    "RunningFor": "3 weeks ago",
+    "Size": "0B",
+    "State": "exited",
+    "Status": "Exited (137) 3 weeks ago"
+}
+{
+    "Command": "\"/hello\"",
+    "CreatedAt": "2026-09-18 23:23:40 +0000 UTC",
+    "ID": "3b06f4f15907",
+    "Image": "hello-world",
+    "Labels": "",
+    "LocalVolumes": "0",
+    "Mounts": "",
+    "Names": "vigorous_knuth",
+    "Networks": "bridge",
+    "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+    },
+    "Ports": "",
+    "RunningFor": "3 weeks ago",
+    "Size": "0B",
+    "State": "exited",
+    "Status": "Exited (0) 3 weeks ago"
+}
+{
+    "Command": "\"/hello\"",
+    "CreatedAt": "2026-09-18 23:21:34 +0000 UTC",
+    "ID": "d306bdcb2bcd",
+    "Image": "hello-world",
+    "Labels": "",
+    "LocalVolumes": "0",
+    "Mounts": "",
+    "Names": "frosty_euclid",
+    "Networks": "bridge",
+    "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+    },
+    "Ports": "",
+    "RunningFor": "3 weeks ago",
+    "Size": "0B",
+    "State": "exited",
+    "Status": "Exited (0) 3 weeks ago"
+}
+{
+    "Command": "\"/hello\"",
+    "CreatedAt": "2026-09-18 23:14:25 +0000 UTC",
+    "ID": "81a141fad106",
+    "Image": "hello-world",
+    "Labels": "",
+    "LocalVolumes": "0",
+    "Mounts": "",
+    "Names": "keen_euler",
+    "Networks": "bridge",
+    "Platform": {
+        "architecture": "amd64",
+        "os": "linux"
+    },
+    "Ports": "",
+    "RunningFor": "3 weeks ago",
+    "Size": "0B",
+    "State": "exited",
+    "Status": "Exited (0) 3 weeks ago"
+}
